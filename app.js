@@ -12,12 +12,14 @@ var passport=require("passport"),
 
 var indexRoutes=require("./routes/index");
 
-mongoose.set('useUnifiedTopology', true);
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useFindAndModify', false);
-mongoose.set('useCreateIndex', true);
-mongoose.set('useUnifiedTopology', true);
-mongoose.connect("mongodb://localhost/ecobrigade");
+mongoose.connect('mongodb+srv://blog:blog@cluster0-ovof1.mongodb.net/test?retryWrites=true&w=majority', {
+	useNewUrlParser: true,
+	useCreateIndex: true
+}).then(() => {
+	console.log('Connected to DB!');
+}).catch(err => {
+	console.log('ERROR:', err.message);
+});
 
 
 
@@ -45,6 +47,7 @@ app.use(function(req, res, next){
 });
 
 app.use("/",indexRoutes);
-app.listen(3000, function() { 
+var port = process.env.PORT || 3000;
+app.listen(port, function() { 
   console.log('Server listening on port 4000'); 
 });
