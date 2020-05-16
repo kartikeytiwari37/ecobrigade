@@ -1,0 +1,42 @@
+.content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+nav{
+	 background: rgba(0, 0, 0,0.3);
+}
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;   
+	
+}
+
+#mainNavbar .nav-link {
+    color: white;
+    font-weight: 500;
+}
+
+#mainNavbar .nav-link:hover {
+
+    color: #EA1C2C;
+}
+
+#mainNavbar .navbar-brand {
+    color: #EA1C2C;
+    font-size: 1.5rem;
+}
+
+
+.navbar.scrolled {
+    /*background: rgba(255, 0, 102,0.2);*/
+    background: rgba(0, 0, 0,0.5);
+    transition: background 500ms;
+}
+
+.icon
+{
+width:100%;
+max-width: 150px;
+height: 90px;
+
+}

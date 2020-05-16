@@ -1,0 +1,39 @@
+<%- include("./partials/header") %>
+<div class="container flash">
+	<%if(error&&error.length>0){%>
+		<div class="alert alert-danger" role="alert">
+			<%=error%>
+			
+		</div>
+	
+	<%}%>
+	<%if(success&&success.length>0){%>
+		<div class="alert alert-success" role="alert">
+			<%=success%>
+			
+		</div>
+	
+	<%}%>
+</div>
+		<div class="container">
+	<div class="testbox2">
+  <h1>Sign In</h1>
+
+<form action="/login" method="post" id="my_form">
+      
+ 
+	<label id="icon" for="username"><i class="icon-ok-sign"></i></label>
+  <input type="text" name="username" id="username" placeholder="Username" required/>
+ 
+  <label id="icon" for="password"><i class="icon-shield"></i></label>
+  <input type="password" name="password" id="password" placeholder="Password" required/>
+	
+  
+   <p>Don't have an account <a href="/register">Sign Up</a>.</p>
+ <button id="register" class="btn btn-lg btn-primary btn-block">
+		Sign In
+	</button>
+  </form>
+</div>
+<%- include("./partials/footer") %>	
+	

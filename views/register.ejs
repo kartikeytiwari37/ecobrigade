@@ -1,0 +1,58 @@
+<%- include("./partials/header") %>
+<div class="container flash">
+	<%if(error&&error.length>0){%>
+		<div class="alert alert-danger" role="alert">
+			<%=error%>
+			
+		</div>
+	
+	<%}%>
+	<%if(success&&success.length>0){%>
+		<div class="alert alert-success" role="alert">
+			<%=success%>
+			
+		</div>
+	
+	<%}%>
+</div>
+		<div class="container">
+	<div class="testbox">
+  <h1>Registration</h1>
+
+<form action="/register" method="post" id="my_form">
+      <hr>
+    <div class="accounttype">
+      <input type="radio" value="Personal" id="radioOne" name="account" checked/>
+      <label for="radioOne" class="radio" chec>Personal</label>
+      <input type="radio" value="Company" id="radioTwo" name="account" />
+      <label for="radioTwo" class="radio">Company</label>
+    </div>
+  <hr>
+  <label id="icon" for="email"><i class="icon-envelope "></i></label>
+  <input type="email" name="email" id="email" placeholder="Email" required/>
+	<label id="icon" for="username"><i class="icon-ok-sign"></i></label>
+  <input type="text" name="username" id="username" placeholder="Username" required/>
+  <label id="icon" for="name"><i class="icon-user"></i></label>
+  <input type="text" name="name" id="name" placeholder="Name" required/>
+	<label id="icon" for="number"><i class="icon-building"></i></label>
+	<input type="text" name="number" id="number" placeholder="Number" required/>
+	<label id="icon" for="address"><i class="icon-building"></i></label>
+  <input type="text" name="address" id="address" placeholder="Address" required/>
+	
+  <label id="icon" for="password"><i class="icon-shield"></i></label>
+  <input type="password" name="password" id="password" placeholder="Password" required/>
+	
+  <div class="gender">
+    <input type="radio" value="male" id="male" name="gender" checked/>
+    <label for="male" class="radio" chec>Male</label>
+    <input type="radio" value="female" id="female" name="gender" />
+    <label for="female" class="radio">Female</label>
+   </div> 
+   <p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
+ <button id="register" class="btn btn-lg btn-primary btn-block">
+		Register
+	</button>
+  </form>
+</div>
+<%- include("./partials/footer") %>	
+	

@@ -1,0 +1,39 @@
+<nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top d-flex">
+        <a href="#" class="navbar-brand"><img src="https://res.cloudinary.com/ktiwaribe17/image/upload/v1589042968/icon_uiwlqg.jpg" class="border border-dark rounded-top rouded-bottom icon"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse  " id="navLinks">
+            <ul class="navbar-nav ">
+                <li class="nav-item ">
+                    <a href="/" class="nav-link active">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">ABOUT US</a>
+                </li>
+				 <li class="nav-item">
+                    <a href="/service" class="nav-link">SERVICES</a>
+                </li>
+              
+  
+
+     
+
+            </ul>
+        </div>
+       
+          
+          <% if(!currentUser){ %>
+        <a href="/register" class="nav-item mr-2 d-none d-md-inline nav-link active" id="login" >Sign up</a>
+    
+        <a href="/login" class="nav-item mr-5 d-none d-md-inline nav-link active">Login </a>
+      <!-- </li> -->
+		  <% } else { %>
+		   <a href="/users/<%= currentUser._id %>" class="nav-item mr-2 d-none d-md-inline nav-link active" id="login" >Signed In As <%= currentUser.username %></a>
+    
+        <a href="/logout" class="nav-item mr-5 d-none d-md-inline nav-link active">Logout </a>
+		 
+		    <% } %>
+
+	
+            </nav>
